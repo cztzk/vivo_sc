@@ -6,6 +6,10 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// 引入mint-ui
+import Mint from 'mint-ui';
+Vue.use(Mint);
+
 // axios
 import axios from 'axios'
 Vue.prototype.$http = axios
@@ -15,10 +19,17 @@ import store from "./store/store"
 
 // 引入滚动组件
 import BScroll from 'better-scroll'
+
+// 引入轮播图组件
+import wcSwiper from 'wc-swiper'
+import 'wc-swiper/style.css'
+Vue.use(wcSwiper);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
